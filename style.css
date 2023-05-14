@@ -1,55 +1,52 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
+.slider_container {
+    position: relative;
+    overflow-x: hidden;
+    height: 200px;
+}
+
+.slider_width {
+    position: absolute;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    left: 0;
+    top: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.item {
+    background-color: rgb(58, 214, 58);
+    width: 300px;
+    height: 200px;
+    margin: 0 10px;
+    font-size: 40px;
+    font-weight: 800;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding: 1rem;
+    color: #fff;
 }
 
-.container {
-    width: 800px;
-    height: 400px;
-    position: relative;
-}
-
-.container .slide {
-    width: 100%;
-    max-width: 800px;
-    height: 100%;
-    display: none;
-}
-
-.container .slide img {
-    width: 100%;
-    height: 100%;
-}
-
-.container span {
-    position: absolute;
+.btn {
+    background: rgb(245, 24, 24);
+    border: none;
+    color: #ffff;
+    font-size: 20px;
+    margin: 20px;
+    padding: 6px 12px;
+    border-radius: 6px;
     cursor: pointer;
-    top: 50%;
-    background-color: white;
-    padding: 10px 14px;
-    border-radius: 50%;
-    transition: 150ms linear;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 
-.container span:hover {
-    background-color: rgb(65, 65, 66);
-    color: white;
-}
-
-.container .left {
-    left: 10px;
-}
-
-.container .right {
-    right: 10px;
+.btn:nth-child(2) {
+    margin-left: -74px;
 }
